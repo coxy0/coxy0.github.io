@@ -10,6 +10,7 @@ export default async function Projects() {
           <li key={p.title}>
             <a
               href={p.href}
+              target="_blank" rel="noopener noreferrer"
               className="block h-full rounded-lg border border-neutral-200 p-4 transition hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600"
             >
               <h3 className="font-medium">{p.title}</h3>
@@ -28,7 +29,7 @@ export default async function Projects() {
           </li>
         ))}
       </ul>
-      <a href="https://github.com/coxy0?tab=repositories" className="mt-4 inline-block text-sm underline underline-offset-4">
+      <a href="https://github.com/coxy0?tab=repositories" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm underline underline-offset-4">
         See all repos...
       </a>
     </section>

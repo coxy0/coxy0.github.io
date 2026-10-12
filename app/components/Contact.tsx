@@ -7,7 +7,7 @@ export default function Contact() {
       <ul className="flex gap-5">
         {links.map(({ name, href, icon: Icon }) => (
           <li key={name}>
-            <a href={href} aria-label={name} title={name} className="opacity-80 transition hover:opacity-100">
+            <a href={href} {...(href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })} aria-label={name} title={name} className="opacity-80 transition hover:opacity-100">
               <Icon size={28} aria-hidden />
             </a>
           </li>
