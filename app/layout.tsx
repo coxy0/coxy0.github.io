@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const spaceMono = Space_Mono({
+  variable: "--font-mono-body",
   subsets: ["latin"],
+  weight: ["400", "700"], // not a variable font
 });
 
 export const metadata: Metadata = {
-  title: "Oliver Cox",
+  title: "oliver cox",
   description: "Oliver Cox, software engineer. Projects and contact.",
 };
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} h-full antialiased`}
+      className={`${spaceMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
